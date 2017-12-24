@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -22,8 +21,8 @@ namespace pdfjs
 
                 if (dependency == null)
                 {
-                    DisplayAlert("Fout bij laden PDF",
-                        "Er is een fout opgetreden bij het laden van de factuur PDF, probeer het opnieuw.", "OK");
+                    DisplayAlert("Error loading PDF", "Computer says no", "OK");
+
                     return;
                 }
 
@@ -40,8 +39,7 @@ namespace pdfjs
 
                 if (string.IsNullOrWhiteSpace(localPath))
                 {
-                    DisplayAlert("Error loading PDF",
-                        "Computer says no", "OK");
+                    DisplayAlert("Error loading PDF", "Computer says no", "OK");
 
                     return;
                 }
