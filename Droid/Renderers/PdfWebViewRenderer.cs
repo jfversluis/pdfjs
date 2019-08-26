@@ -23,5 +23,12 @@ namespace pdfjs.Droid
 				Control.Settings.AllowUniversalAccessFromFileURLs = true;
 			}
 		}
+		
+		// If you want to enable scrolling in WebView uncomment the following lines.
+		//public override bool DispatchTouchEvent(MotionEvent e)
+		//{
+		//    Parent.RequestDisallowInterceptTouchEvent(true);
+		//    return base.DispatchTouchEvent(e);
+		//}
 	}
 }
