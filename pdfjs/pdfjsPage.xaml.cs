@@ -46,7 +46,7 @@ namespace pdfjs
             }
 
             if (Device.RuntimePlatform == Device.Android)
-                PdfView.Source = $"file:///android_asset/pdfjs/web/viewer.html?file={WebUtility.UrlEncode(localPath)}";
+                PdfView.Source = $"file:///android_asset/pdfjs/web/viewer.html?file={"file:///" + WebUtility.UrlEncode(localPath)}";
             else
                 PdfView.Source = url;
         }
